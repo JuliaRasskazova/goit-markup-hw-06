@@ -33,8 +33,7 @@ h4,
 h5,
 h6,
 p {
-    margin-top: 0;
-    padding-left: 0;
+    margin: 0;
 }
 a,
 ul {
@@ -130,7 +129,7 @@ color: #2e2f42;
     color: #4d5ae5;
     text-decoration: none;
     display: inline-block;
-    margin: 0 86px 16px;
+    margin-bottom: 16px;
 }
 .logo-studio-footer {
     color: #f4f4fd;
@@ -161,7 +160,6 @@ color: #2e2f42;
     display: block;
     margin-left: auto;
     font-style: normal;
-    padding: 24px 0;
 }
 
 .add {
@@ -172,6 +170,7 @@ color: #2e2f42;
         display: none;
         }
     .navigation {
+        gap: 40px;
         display: flex;
         align-items: center;
         }
@@ -429,7 +428,6 @@ color: #2e2f42;
         display: flex;
         align-items: flex-start;
         flex-direction: column;
-        gap: 8px;
         width: calc((100% - 72px) / 4);
     }
 
@@ -543,19 +541,13 @@ fill: #f4f4fd;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 64px 24px;
+        justify-content: center;
+        gap: 24px;
     }
 }
 
 .team-link {
     min-width: 264px;
-}
-
-@media screen and (min-width: 1158px) {
-    .team-list {
-        display: flex;
-        width: calc((100% - 72px) / 4);
-    }
 }
 /* #endregion team */
 
@@ -674,7 +666,7 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     flex-wrap: wrap;
      justify-content: center;
-    text-align: center;
+    width: 264px;
  }
 .text-footer {
     font-weight: 400;
@@ -816,9 +808,7 @@ flex-direction: column;
 .footer-logo-text{
     min-width: 264px;
     margin-right: 120px;
-}
-.team-wrapper-footer {
-    margin: 0 0 16px;
+    justify-content: flex-start;
 }
 .footer-social {
     align-items: flex-start;
@@ -852,15 +842,24 @@ flex-direction: column;
     transform: translateX(-50%) translateY(-50%);
     background-color: #FCFCFC;
     border-radius: 4px;
-    width: 408px;
+    width: 288px;
     min-height: 584px;
-    padding: 72px 24px 24px 24px;
+    padding-top: 72px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 24px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 1px 3px rgba(0, 0, 0, 0.12),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+@media screen and (min-width: 768px) {
+    .modal {
+       width: 408px;
+       padding: 72px 24px 24px 24px;
+    }
+    
+}
 
 .modal-btn {
     display: flex;
@@ -968,9 +967,7 @@ flex-direction: column;
 .modal-message:focus {
     border-color: #4d5ae5;
 }
-/* .modal-wrapper-comment {
-    margin-bottom: 16px;
-} */
+
 .agreement {
     font-size: 12px;
     line-height: 1.17;
